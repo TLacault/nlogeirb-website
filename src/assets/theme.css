@@ -66,6 +66,7 @@ body {
   background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
 /* Utilities */

@@ -100,28 +100,25 @@ export default {
 
 .footer-brand {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
 }
 
 .footer-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: radial-gradient(
-    120% 120% at 20% 20%,
-    rgba(96, 165, 250, 0.25),
-    rgba(30, 64, 175, 0.35)
-  );
-  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.35), var(--shadow-sm);
-  display: grid;
-  place-items: center;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
 }
 
 .footer-logo img {
-  width: 32px;
-  height: 32px;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
   object-fit: contain;
 }
 

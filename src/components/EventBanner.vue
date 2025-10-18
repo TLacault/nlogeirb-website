@@ -7,9 +7,15 @@
           <p class="event-description">
             Join us for competitive programming practice every Thursday
           </p>
-          <div class="event-time">
-            <i class="ri-time-line"></i>
-            <span>16:00 - 18:00</span>
+          <div class="event-details">
+            <div class="event-location">
+              <i class="ri-map-pin-line"></i>
+              <span>Room I101</span>
+            </div>
+            <div class="event-time">
+              <i class="ri-time-line"></i>
+              <span>16:00 - 18:00</span>
+            </div>
           </div>
         </div>
 
@@ -109,6 +115,7 @@ export default {
   border-top: 1px solid rgba(59, 130, 246, 0.15);
   border-bottom: 1px solid rgba(59, 130, 246, 0.15);
   padding: 32px 0;
+  margin: 50px 0 0;
 }
 
 .event-content {
@@ -141,6 +148,13 @@ export default {
   margin: 0;
 }
 
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event-location,
 .event-time {
   display: flex;
   align-items: center;
@@ -194,6 +208,10 @@ export default {
     grid-template-columns: 1fr;
     gap: 24px;
     text-align: center;
+  }
+
+  .event-details {
+    align-items: center;
   }
 
   .countdown {

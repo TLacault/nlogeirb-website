@@ -59,24 +59,39 @@
       @click.self="toggleDrawer(false)"
     >
       <div class="drawer-panel">
-        <router-link to="/" class="drawer-link" @click="toggleDrawer(false)"
-          >Home</router-link
-        >
-        <router-link to="/team" class="drawer-link" @click="toggleDrawer(false)"
-          >Team</router-link
-        >
-        <router-link
-          to="/tools"
-          class="drawer-link"
-          @click="toggleDrawer(false)"
-          >Resources</router-link
-        >
-        <router-link
-          to="/contact"
-          class="drawer-link"
-          @click="toggleDrawer(false)"
-          >Contact</router-link
-        >
+        <div class="drawer-header">
+          <h3 class="drawer-title">Menu</h3>
+          <button
+            class="drawer-close"
+            @click="toggleDrawer(false)"
+            aria-label="Close menu"
+          >
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <nav class="drawer-nav" aria-label="Mobile navigation">
+          <router-link to="/" class="drawer-link" @click="toggleDrawer(false)"
+            >Home</router-link
+          >
+          <router-link
+            to="/team"
+            class="drawer-link"
+            @click="toggleDrawer(false)"
+            >Team</router-link
+          >
+          <router-link
+            to="/tools"
+            class="drawer-link"
+            @click="toggleDrawer(false)"
+            >Resources</router-link
+          >
+          <router-link
+            to="/contact"
+            class="drawer-link"
+            @click="toggleDrawer(false)"
+            >Contact</router-link
+          >
+        </nav>
       </div>
     </div>
   </header>
@@ -210,44 +225,106 @@ export default {
 .drawer {
   position: fixed;
   inset: 0;
-  display: none;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 240ms ease, visibility 240ms ease;
 }
 .drawer.open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .drawer-panel {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
-  width: min(78%, 340px);
-  background: var(--color-bg-elevated);
-  border-left: 1px solid rgba(59, 130, 246, 0.15);
+  width: 100vw;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 25, 51, 0.95),
+    rgba(11, 16, 32, 0.98)
+  );
+  backdrop-filter: blur(12px);
+  border-left: 1px solid rgba(59, 130, 246, 0.3);
   box-shadow: var(--shadow-md);
-  padding: 24px;
   transform: translateX(100%);
   transition: transform 240ms ease;
+  display: flex;
+  flex-direction: column;
 }
 .drawer.open .drawer-panel {
   transform: translateX(0%);
 }
-.drawer-links {
-  display: grid;
-  gap: 8px;
-  margin-top: 16px;
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
 }
+
+.drawer-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.drawer-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 160ms ease;
+}
+
+.drawer-close:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.drawer-nav {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .drawer-link {
-  padding: 10px 12px;
-  border-radius: 10px;
-  color: var(--color-text-muted);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  padding: 16px 20px;
+  border-radius: 12px;
+  color: var(--color-text);
+  border: 1px solid rgba(96, 165, 250, 0.4);
   font-family: var(--font-mono);
   font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 160ms ease;
+  display: block;
+  background: rgba(96, 165, 250, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .drawer-link:hover {
-  background: rgba(59, 130, 246, 0.1);
+  background: rgba(59, 130, 246, 0.15);
   color: var(--color-text);
-  border-color: rgba(96, 165, 250, 0.45);
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 </style>
