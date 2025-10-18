@@ -44,11 +44,18 @@
           <a href="#" class="footer-social-link" aria-label="Discord">
             <i class="ri-discord-fill"></i>
           </a>
+          <a href="#" class="footer-social-link" aria-label="Discord">
+            <i class="ri-telegram-2-fill"></i>
+          </a>
           <a href="#" class="footer-social-link" aria-label="GitHub">
             <i class="ri-github-fill"></i>
           </a>
-          <a href="#" class="footer-social-link" aria-label="LinkedIn">
-            <i class="ri-linkedin-fill"></i>
+          <a
+            href="mailto:nlog@enseirb-matmeca.fr"
+            class="footer-social-link"
+            aria-label="Email"
+          >
+            <i class="ri-mail-line"></i>
           </a>
         </div>
       </div>

@@ -63,6 +63,7 @@ body {
   background-size: 28px 28px, 28px 28px, auto, auto, auto;
   background-position: top left, top left, center, center, center;
   background-repeat: repeat, repeat, no-repeat, no-repeat;
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: var(--font-sans);
 }
