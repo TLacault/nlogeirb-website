@@ -41,13 +41,25 @@
       <div class="footer-social">
         <h4 class="footer-social-title">Connect</h4>
         <div class="footer-social-links">
-          <a href="#" class="footer-social-link" aria-label="Discord">
+          <a
+            href="https://discord.gg/bSBBM5kgRf"
+            class="footer-social-link"
+            aria-label="Discord"
+          >
             <i class="ri-discord-fill"></i>
           </a>
-          <a href="#" class="footer-social-link" aria-label="Discord">
+          <a
+            href="https://t.me/+apRnSJjOvY0wZWM8"
+            class="footer-social-link"
+            aria-label="Telegram"
+          >
             <i class="ri-telegram-2-fill"></i>
           </a>
-          <a href="#" class="footer-social-link" aria-label="GitHub">
+          <a
+            href="https://github.com/TLacault/nlogeirb-website"
+            class="footer-social-link"
+            aria-label="GitHub"
+          >
             <i class="ri-github-fill"></i>
           </a>
           <a

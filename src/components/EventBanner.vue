@@ -112,8 +112,8 @@ export default {
 <style scoped>
 .event-banner {
   background: var(--color-bg-elevated);
-  border-top: 1px solid rgba(59, 130, 246, 0.15);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+  border-top: 2px solid rgba(59, 130, 246, 0.15);
+  border-bottom: 2px solid rgba(59, 130, 246, 0.15);
   padding: 32px 0;
   margin: 50px 0 0;
 }

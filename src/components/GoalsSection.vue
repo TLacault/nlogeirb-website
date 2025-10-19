@@ -2,90 +2,105 @@
   <section class="goals-section">
     <div class="container">
       <div class="goals-header">
-        <h2 class="goals-title">Why Join NLog'Eirb?</h2>
-        <p class="goals-subtitle">
-          Master competitive programming and ace technical interviews with our
-          comprehensive training program
-        </p>
+        <ScrollReveal>
+          <h2 class="goals-title">Why Join NLog'Eirb?</h2>
+        </ScrollReveal>
+        <ScrollReveal>
+          <p class="goals-subtitle">
+            Master competitive programming and ace technical interviews with our
+            comprehensive training program
+          </p>
+        </ScrollReveal>
       </div>
 
       <div class="goals-grid">
-        <div class="goal-card">
-          <div class="goal-icon">
-            <i class="ri-code-s-slash-line"></i>
-          </div>
-          <div class="goal-content">
-            <h3 class="goal-title">Master DSA & Technical Interviews</h3>
-            <p class="goal-description">
-              Learn to solve efficiently and quickly DSA problems to prepare for
-              interviews and programming contests. Master C++ and its libraries
-              to code faster and become a true expert at solving algorithmic
-              challenges.
-            </p>
-            <div class="goal-features">
-              <div class="feature-item">
-                <i class="ri-check-line"></i>
-                <span>Data Structures & Algorithms</span>
-              </div>
-              <div class="feature-item">
-                <i class="ri-check-line"></i>
-                <span>C++ Optimization & Libraries</span>
-              </div>
-              <div class="feature-item">
-                <i class="ri-check-line"></i>
-                <span>Technical Interview Prep</span>
+        <ScrollReveal>
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="ri-code-s-slash-line"></i>
+            </div>
+            <div class="goal-content">
+              <h3 class="goal-title">Master DSA & Technical Interviews</h3>
+              <p class="goal-description">
+                Learn to solve efficiently and quickly DSA problems to prepare
+                for interviews and programming contests. Master C++ and its
+                libraries to code faster and become a true expert at solving
+                algorithmic challenges.
+              </p>
+              <div class="goal-features">
+                <div class="feature-item">
+                  <i class="ri-check-line"></i>
+                  <span>Data Structures & Algorithms</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-check-line"></i>
+                  <span>C++ Optimization & Libraries</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-check-line"></i>
+                  <span>Technical Interview Prep</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
-        <div class="goal-card">
-          <div class="goal-icon">
-            <i class="ri-trophy-line"></i>
-          </div>
-          <div class="goal-content">
-            <h3 class="goal-title">Compete at the Highest Level</h3>
-            <p class="goal-description">
-              Learn how to progress in the competitive environment and prepare
-              for SWERC/ICPC and weekly Codeforces competitions. Discover
-              advanced algorithms and data structures that go beyond regular
-              coursework.
-            </p>
-            <div class="goal-features">
-              <div class="feature-item">
-                <i class="ri-check-line"></i>
-                <span>ICPC & SWERC Preparation</span>
-              </div>
-              <div class="feature-item">
-                <i class="ri-check-line"></i>
-                <span>Weekly Codeforces Contests</span>
-              </div>
-              <div class="feature-item">
-                <i class="ri-check-line"></i>
-                <span>Advanced Algorithm Theory</span>
+        <ScrollReveal delay="200">
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="ri-trophy-line"></i>
+            </div>
+            <div class="goal-content">
+              <h3 class="goal-title">Compete at the Highest Level</h3>
+              <p class="goal-description">
+                Learn how to progress in the competitive environment and prepare
+                for SWERC/ICPC and weekly Codeforces competitions. Discover
+                advanced algorithms and data structures that go beyond regular
+                coursework.
+              </p>
+              <div class="goal-features">
+                <div class="feature-item">
+                  <i class="ri-check-line"></i>
+                  <span>ICPC & SWERC Preparation</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-check-line"></i>
+                  <span>Weekly Codeforces Contests</span>
+                </div>
+                <div class="feature-item">
+                  <i class="ri-check-line"></i>
+                  <span>Advanced Algorithm Theory</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
 
       <div class="goals-cta">
-        <router-link to="/team" class="btn btn-primary">
-          <i class="ri-team-line"></i>
-          Meet the Team
-        </router-link>
-        <router-link to="/tools" class="btn btn-ghost">
-          <i class="ri-book-open-line"></i>
-          Explore Resources
-        </router-link>
+        <ScrollReveal>
+          <router-link to="/team" class="btn btn-primary">
+            <i class="ri-team-line"></i>
+            Meet the Team
+          </router-link>
+        </ScrollReveal>
+        <ScrollReveal delay="200">
+          <router-link to="/tools" class="btn btn-ghost">
+            <i class="ri-book-open-line"></i>
+            Explore Resources
+          </router-link>
+        </ScrollReveal>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import ScrollReveal from "@/components/ScrollReveal.vue";
+
 export default {
   name: "GoalsSection",
+  components: { ScrollReveal },
 };
 </script>
 

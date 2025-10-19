@@ -16,15 +16,20 @@
     <section class="contact-socials">
       <div class="container">
         <div class="socials-grid">
-          <SocialCard
-            v-for="social in socialLinks"
+          <ScrollReveal
+            v-for="(social, index) in socialLinks"
             :key="social.id"
-            :name="social.name"
-            :description="social.description"
-            :url="social.url"
-            :icon-class="social.iconClass"
-            :is-featured="social.isFeatured"
-          />
+            :delay="index * 100"
+            direction="up"
+          >
+            <SocialCard
+              :name="social.name"
+              :description="social.description"
+              :url="social.url"
+              :icon-class="social.iconClass"
+              :is-featured="social.isFeatured"
+            />
+          </ScrollReveal>
         </div>
       </div>
     </section>
@@ -32,19 +37,21 @@
     <!-- Info Banner -->
     <section class="contact-info">
       <div class="container">
-        <div class="info-banner">
-          <div class="info-icon">
-            <i class="ri-information-line"></i>
+        <ScrollReveal :delay="200" direction="up">
+          <div class="info-banner">
+            <div class="info-icon">
+              <i class="ri-information-line"></i>
+            </div>
+            <div class="info-content">
+              <h3 class="info-title">Feel free to contact us</h3>
+              <p class="info-description">
+                We usually spend time at Eirbware. If you have any questions,
+                don't hesitate to ask us there or on Discord - we're very active
+                there and happy to help !
+              </p>
+            </div>
           </div>
-          <div class="info-content">
-            <h3 class="info-title">Feel free to contact us</h3>
-            <p class="info-description">
-              We usually spend time at Eirbware. If you have any questions,
-              don't hesitate to ask us there or on Discord - we're very active
-              there and happy to help !
-            </p>
-          </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   </div>
@@ -52,10 +59,11 @@
 
 <script>
 import SocialCard from "@/components/SocialCard.vue";
+import ScrollReveal from "@/components/ScrollReveal.vue";
 
 export default {
   name: "ContactView",
-  components: { SocialCard },
+  components: { SocialCard, ScrollReveal },
   data() {
     return {
       socialLinks: [

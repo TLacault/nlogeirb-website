@@ -2,18 +2,27 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <h1 class="hero-title">NLog'Eirb Competitive Programming</h1>
-        <p class="hero-sub">
-          Train, solve, and compete with a focus on clarity and algorithmic
-          excellence.
-        </p>
+        <ScrollReveal>
+          <h1 class="hero-title">NLog'Eirb Competitive Programming</h1>
+        </ScrollReveal>
+        <ScrollReveal delay="200">
+          <p class="hero-sub">
+            Train, solve, and compete with a focus on clarity and algorithmic
+            excellence.
+          </p>
+        </ScrollReveal>
+
         <div class="hero-cta">
-          <router-link to="/tools" class="btn btn-primary"
-            >Explore Resources</router-link
-          >
-          <router-link to="/team" class="btn btn-ghost"
-            >Meet the Team</router-link
-          >
+          <ScrollReveal delay="400">
+            <router-link to="/tools" class="btn btn-primary"
+              >Explore Resources</router-link
+            >
+          </ScrollReveal>
+          <ScrollReveal delay="600">
+            <router-link to="/team" class="btn btn-ghost"
+              >Meet the Team</router-link
+            >
+          </ScrollReveal>
         </div>
       </div>
 
@@ -38,8 +47,11 @@
 </template>
 
 <script>
+import ScrollReveal from "@/components/ScrollReveal.vue";
+
 export default {
   name: "HeroSection",
+  components: { ScrollReveal },
   methods: {
     scrollDown() {
       window.scrollTo({ top: window.innerHeight, behavior: "smooth" });

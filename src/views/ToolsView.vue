@@ -26,15 +26,20 @@
           </p>
         </div>
         <div class="resources-grid">
-          <ResourceCard
-            v-for="resource in leetcodeResources"
+          <ScrollReveal
+            v-for="(resource, index) in leetcodeResources"
             :key="resource.id"
-            :name="resource.name"
-            :description="resource.description"
-            :url="resource.url"
-            :icon-class="resource.iconClass"
-            :is-featured="resource.isFeatured"
-          />
+            :delay="index * 150"
+            direction="up"
+          >
+            <ResourceCard
+              :name="resource.name"
+              :description="resource.description"
+              :url="resource.url"
+              :icon-class="resource.iconClass"
+              :is-featured="resource.isFeatured"
+            />
+          </ScrollReveal>
         </div>
       </div>
     </section>
@@ -52,15 +57,20 @@
           </p>
         </div>
         <div class="resources-grid">
-          <ResourceCard
-            v-for="resource in icpcResources"
+          <ScrollReveal
+            v-for="(resource, index) in icpcResources"
             :key="resource.id"
-            :name="resource.name"
-            :description="resource.description"
-            :url="resource.url"
-            :icon-class="resource.iconClass"
-            :is-featured="resource.isFeatured"
-          />
+            :delay="index * 150"
+            direction="up"
+          >
+            <ResourceCard
+              :name="resource.name"
+              :description="resource.description"
+              :url="resource.url"
+              :icon-class="resource.iconClass"
+              :is-featured="resource.isFeatured"
+            />
+          </ScrollReveal>
         </div>
       </div>
     </section>
@@ -69,10 +79,11 @@
 
 <script>
 import ResourceCard from "@/components/ResourceCard.vue";
+import ScrollReveal from "@/components/ScrollReveal.vue";
 
 export default {
   name: "ToolsView",
-  components: { ResourceCard },
+  components: { ResourceCard, ScrollReveal },
   data() {
     return {
       leetcodeResources: [

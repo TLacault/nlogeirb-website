@@ -18,15 +18,11 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition; // Restore previous scroll position
-    } else {
-      return {
-        top: 0,
-        behavior: "instant",
-      };
-    }
+  scrollBehavior() {
+    return {
+      top: 0,
+      behavior: "instant",
+    };
   },
 });
 

@@ -26,14 +26,19 @@
     <section class="team-members">
       <div class="container">
         <div class="members-grid">
-          <MemberCard
-            v-for="member in teamMembers"
+          <ScrollReveal
+            v-for="(member, index) in teamMembers"
             :key="member.id"
-            :full-name="member.fullName"
-            :role="member.role"
-            :image-src="member.imageSrc"
-            :linkedin-url="member.linkedinUrl"
-          />
+            :delay="index * 100"
+            direction="up"
+          >
+            <MemberCard
+              :full-name="member.fullName"
+              :role="member.role"
+              :image-src="member.imageSrc"
+              :linkedin-url="member.linkedinUrl"
+            />
+          </ScrollReveal>
         </div>
       </div>
     </section>
@@ -42,10 +47,11 @@
 
 <script>
 import MemberCard from "@/components/MemberCard.vue";
+import ScrollReveal from "@/components/ScrollReveal.vue";
 
 export default {
   name: "TeamView",
-  components: { MemberCard },
+  components: { MemberCard, ScrollReveal },
   data() {
     return {
       teamMembers: [
@@ -53,50 +59,54 @@ export default {
           id: 1,
           fullName: "Nasr-allah HITAR",
           role: "Président",
-          imageSrc: require("@/assets/team/nasr.jpg"),
-          linkedinUrl: "#",
+          imageSrc: require("@/assets/team/nasr.png"),
+          linkedinUrl:
+            "https://www.linkedin.com/in/nasr-allah-hitar-5859391b6/",
         },
         {
           id: 2,
-          fullName: "Nemo D'acremont",
-          role: "Co-Fondateur",
-          imageSrc: require("@/assets/team/nemo.png"),
-          linkedinUrl: "#",
+          fullName: "Tim Lacault",
+          role: "Vice Président - Respo Forma",
+          imageSrc: require("@/assets/team/tim.png"),
+          linkedinUrl: "https://www.linkedin.com/in/tim-lacault/",
         },
         {
           id: 3,
-          fullName: "Tim Lacault",
-          role: "Vice Président - Respo Forma",
-          imageSrc: require("@/assets/team/tim.jpg"),
-          linkedinUrl: "#",
-        },
-        {
-          id: 4,
           fullName: "Raphaël Bourgouin",
           role: "Vice Président",
           imageSrc: require("@/assets/team/raphael.png"),
-          linkedinUrl: "#",
+          linkedinUrl:
+            "https://www.linkedin.com/in/rapha%C3%ABl-bourgouin-566158291/",
         },
         {
-          id: 5,
+          id: 4,
           fullName: "Gaspard Mongenet",
           role: "Trésorier",
           imageSrc: require("@/assets/team/gaspard.png"),
           linkedinUrl: "#",
         },
         {
-          id: 6,
-          fullName: "ThomasTrepant",
+          id: 5,
+          fullName: "Thomas Trepant",
           role: "Secrétaire général",
           imageSrc: require("@/assets/team/thomas.png"),
-          linkedinUrl: "#",
+          linkedinUrl:
+            "https://www.linkedin.com/in/thomas-tr%C3%A9pant-378167215/",
         },
         {
-          id: 7,
+          id: 6,
           fullName: "Yassine Berrhazi",
           role: "Respo Com",
           imageSrc: require("@/assets/team/yassine.png"),
-          linkedinUrl: "#",
+          linkedinUrl:
+            "https://www.linkedin.com/in/yassine-berrhazi-5a52241b5/",
+        },
+        {
+          id: 7,
+          fullName: "Nemo D'acremont",
+          role: "Co-Fondateur",
+          imageSrc: require("@/assets/team/nemo.png"),
+          linkedinUrl: "https://www.linkedin.com/in/ndacremont/",
         },
       ],
     };
