@@ -56,12 +56,19 @@
             <i class="ri-telegram-2-fill"></i>
           </a>
           <a
+            href="https://www.linkedin.com/company/nlog-eirb/"
+            class="footer-social-link"
+            aria-label="LinkedIn"
+          >
+            <i class="ri-linkedin-fill"></i>
+          </a>
+          <!-- <a
             href="https://github.com/TLacault/nlogeirb-website"
             class="footer-social-link"
             aria-label="GitHub"
           >
             <i class="ri-github-fill"></i>
-          </a>
+          </a> -->
           <a
             href="mailto:nlog@enseirb-matmeca.fr"
             class="footer-social-link"
@@ -76,6 +83,15 @@
     <!-- Copyright -->
     <div class="footer-bottom">
       <div class="container">
+        <p class="footer-made-with">
+          Made with <span style="color: #e25555">&#10084;</span> by
+          <a
+            href="https://github.com/TLacault"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Tim Lacault</a
+          >
+        </p>
         <p class="footer-copyright">
           © {{ currentYear }} NLog'Eirb. All rights reserved.
         </p>
@@ -240,6 +256,19 @@ export default {
   color: var(--color-text-muted);
   font-size: 14px;
   margin: 0;
+  margin-top: 15px;
+}
+
+.footer-made-with {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin: 4px 0 0;
+
+  & a {
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
 }
 
 @media (max-width: 768px) {

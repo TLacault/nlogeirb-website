@@ -78,11 +78,11 @@ export default {
         },
         {
           id: 2,
-          name: "GitHub",
+          name: "Telegram",
           description:
-            "Check out our projects, repositories, and open-source contributions",
+            "Join our Telegram channel for real-time updates and discussions",
           url: "#",
-          iconClass: "ri-github-fill",
+          iconClass: "ri-telegram-2-fill",
           isFeatured: false,
         },
         {
