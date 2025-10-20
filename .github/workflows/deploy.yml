@@ -28,18 +28,18 @@ jobs:
           SSH_CONFIG: ${{ secrets.SSH_CONFIG_BASE64 }}
         run: |
           mkdir -p ${HOME}/.ssh
-          echo "$SSH_SKEY" | base64 --decode > ${HOME}/.ssh/id_eirb
-          echo "$SSH_PKEY" | base64 --decode > ${HOME}/.ssh/id_eirb.pub
-          echo "$SSH_CERT" | base64 --decode > ${HOME}/.ssh/id_eirb-cert.pub
+          echo "$SSH_SKEY" | base64 --decode > ${HOME}/.ssh/git-eirb
+          echo "$SSH_PKEY" | base64 --decode > ${HOME}/.ssh/git-eirb.pub
+          echo "$SSH_CERT" | base64 --decode > ${HOME}/.ssh/certs/eirbware-cert.pub
           echo "$SSH_CONFIG" | base64 --decode > ${HOME}/.ssh/config
           chmod 400 ${HOME}/.ssh/*
-      - name: Build eirb.fr
+      - name: Build nlog.eirb.fr
         run: |
           pnpm build
       - name: Mount server files
         run: |
           mkdir -p ${HOME}/mnt
-          sshfs -o IdentityFile=${HOME}/.ssh/id_eirb -o StrictHostKeyChecking=no eirb: ${HOME}/mnt
+          sshfs -o IdentityFile=${HOME}/.ssh/git_eirb -o StrictHostKeyChecking=no eirb: ${HOME}/mnt
       - name: Copy new version
         run: |
           cp -r dist/* ${HOME}/mnt/nginx/www
