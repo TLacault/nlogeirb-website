@@ -72,7 +72,7 @@ export default {
           name: "Discord",
           description:
             "Join our Discord server for discussions, announcements, and community support",
-          url: "#",
+          url: "https://discord.gg/bSBBM5kgRf",
           iconClass: "ri-discord-fill",
           isFeatured: true,
         },
@@ -81,7 +81,7 @@ export default {
           name: "Telegram",
           description:
             "Join our Telegram channel for real-time updates and discussions",
-          url: "#",
+          url: "https://t.me/+apRnSJjOvY0wZWM8",
           iconClass: "ri-telegram-2-fill",
           isFeatured: false,
         },
@@ -90,7 +90,7 @@ export default {
           name: "LinkedIn",
           description:
             "Connect with us professionally and stay updated on our activities",
-          url: "#",
+          url: "https://www.linkedin.com/company/nlog-eirb/",
           iconClass: "ri-linkedin-fill",
           isFeatured: false,
         },
